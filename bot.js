@@ -2,7 +2,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const fs = require("fs");
-var prefix = "-"
+var prefix = "kb!"
 //Required if editing do not change.
 
 bot.commands = new Discord.Collection()
@@ -19,7 +19,7 @@ fs.readdir("./commands/", (err, files) => {
 
 //When bot starts up
 bot.on("ready", () => {
-    bot.user.setActivity("Looking for -help!")
+    bot.user.setActivity("Looking for kb!help!")
     console.log("I'm alive!!")
 })
 
