@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const ownerids = require('../config.json').ownerid
 
 module.exports.run = (bot, message, args) => {
+    if(message.author.id == "373583057644683274") return;
+    
     if (ownerids.includes(message.author.id)) {
     const content = message.content.split(' ').slice(1).join(' ');
   const result = new Promise((resolve, reject) => resolve(eval(content)));
